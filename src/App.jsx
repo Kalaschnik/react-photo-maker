@@ -21,8 +21,8 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>
-            <span role="img" aria-labelledby="pizza slice">🍕</span>
-          Pizzagame Network
+            {/* <span role="img" aria-labelledby="pizza slice">🍕</span> */}
+          Headline 1
           </h1>
           <h2>Avatar Creator</h2>
           <p>
