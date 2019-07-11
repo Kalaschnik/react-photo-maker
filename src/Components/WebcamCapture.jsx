@@ -129,7 +129,7 @@ export default class WebcamCapture extends React.Component {
     const saveBtn = (
       <Button
         style={{ display: 'none' }}
-        onClick={() => downloadjs(this.state.imageData, prompt('Please enter your Pizzagame ID'), 'image/png')}
+        onClick={() => downloadjs(this.state.imageData, prompt('Please enter your Name'), 'image/png')}
         id="saveBtn"
         variant="contained"
         color="primary"
