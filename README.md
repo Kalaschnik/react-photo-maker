@@ -1,5 +1,5 @@
 # Circular Profile Picture Generator
-![alt text](example.gif "Logo Title Text 1")
+<img src="example.gif" width="50%">
 
 This React-based app does the following:
 1. Opens the webcam and ...
