@@ -1,8 +1,24 @@
 # Circular Profile Picture Generator
+
+> _A React-based application that accesses a user’s webcam, allowing to create and crop a (circular) profile picture_
+
+> Adaptation for the _Social Games Battery_
+> Demo: kalinke.io/photo-maker
+
 <img src="example.gif" width="50%">
 
-This React-based app does the following:
-1. Opens the webcam and ...
-2. captures images using `getUserMedia()` (using https://github.com/mozmorris/react-webcam)
-3. Crop the taken image with a circle border (using http://foliotek.github.io/Croppie/)
-4. Save the result with a given name (prompt) (using https://www.npmjs.com/package/downloadjs)
+# Dependencies
+
+- NodeJs
+
+# Edit changes & Deploy on your server
+
+1. Clone
+2. `npm ci`
+3. `npm run build`
+
+# Credits
+
+- https://github.com/mozmorris/react-webcam
+- http://foliotek.github.io/Croppie/
+- https://www.npmjs.com/package/downloadjs
