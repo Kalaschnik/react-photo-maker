@@ -3,7 +3,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: url(img/pizzagame2-logo-1920x1080.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #0c0c0c;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,6 +14,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 50px;
 }
 
 a {

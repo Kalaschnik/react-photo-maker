@@ -1,11 +1,6 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import './App.css';
 import WebcamCapture from './Components/WebcamCapture';
-
-/* const temp = async () => {
-  await moveFile('C:\\Users\\Steven\\test.txt', 'C:\\Users\\Steven\\temp\\test.txt');
-  console.log('The file has been moved');
-}; */
 
 class App extends Component {
   constructor(props) {
@@ -21,16 +16,20 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>
-            {/* <span role="img" aria-labelledby="pizza slice">🍕</span> */}
-          Headline 1
+            🍕 Pizzagame & Cyberball ⚾
+            <br />Network
           </h1>
           <h2>Avatar Creator</h2>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-            At vero eos et accusam et justo duo dolores et ea rebum.
-          </p>
+Follow the 3 steps:
+            <br />
+          (1) Capture
+          <br />
+          (2) Crop
+          <br />
+          (3) Send
 
+          </p>
           <WebcamCapture />
         </header>
       </div>

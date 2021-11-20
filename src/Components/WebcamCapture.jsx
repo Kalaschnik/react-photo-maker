@@ -1,4 +1,4 @@
-/* eslint-disable no-alert */
+﻿/* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
@@ -10,6 +10,7 @@ import CropIcon from '@material-ui/icons/Crop';
 import UndoIcon from '@material-ui/icons/Undo';
 import EditIcon from '@material-ui/icons/Edit';
 import SaveIcon from '@material-ui/icons/Save';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import Croppie from 'croppie';
 
 const downloadjs = require('downloadjs');
@@ -21,7 +22,7 @@ export default class WebcamCapture extends React.Component {
     this.state = {
       camIsOn: false,
       imageData: null,
-      fileName: '',
+      saved: false,
     };
   }
 
@@ -38,8 +39,8 @@ export default class WebcamCapture extends React.Component {
     const el = document.getElementById('demo-basic');
     console.log(el);
     const vanilla = new Croppie(el, {
-      viewport: { width: 100, height: 100, type: 'circle' },
-      boundary: { width: 300, height: 300 },
+      viewport: { width: 400, height: 400, type: 'circle' },
+      boundary: { width: 640, height: 480 },
       showZoomer: true,
       enableOrientation: false,
       enableResize: false,
@@ -67,10 +68,11 @@ export default class WebcamCapture extends React.Component {
 
   render() {
     const videoConstraints = {
-      width: 640,
-      height: 480,
+      width: 1280,
+      height: 720
       // the default is the device which is first in enumerateDevices
       // disable all interal cameras in Device Manager if you want external camera
+      // https://github.com/mozmorris/react-webcam/issues/147
       /* facingMode: 'user', */ // facingMode: { exact: "environment" }
     };
 
@@ -78,8 +80,8 @@ export default class WebcamCapture extends React.Component {
       <div id="webcam">
         <Webcam
           audio={false}
-          width={640}
-          height={480}
+          width={1280} // 640
+          height={720} // 480
           ref={this.setRef}
           screenshotFormat="image/webp"
           videoConstraints={videoConstraints}
@@ -129,14 +131,31 @@ export default class WebcamCapture extends React.Component {
     const saveBtn = (
       <Button
         style={{ display: 'none' }}
-        onClick={() => downloadjs(this.state.imageData, prompt('Please enter your Name'), 'image/png')}
+        onClick={() => {
+          downloadjs(
+            this.state.imageData, prompt('Please enter your Pizzagame ID'), 'image/png',
+          ); this.setState({ saved: true });
+        }}
         id="saveBtn"
         variant="contained"
         color="primary"
       >
         <SaveIcon />
         {' '}
-        Save
+        Save A Copy
+      </Button>
+    );
+
+    const cloudUploadBtn = (
+      <Button
+        onClick={() => this.setState({ imageData: null, camIsOn: false, saved: false })}
+        variant="contained"
+        color="secondary"
+        size="large"
+      >
+        <CloudUploadIcon />
+        {' '}
+        Upload & Reset
       </Button>
     );
 
@@ -174,6 +193,8 @@ export default class WebcamCapture extends React.Component {
             {doCropBtn}
 
             {saveBtn}
+
+            {this.state.saved && cloudUploadBtn}
 
 
           </>
