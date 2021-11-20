@@ -2,8 +2,9 @@
 
 > _A React-based application that accesses a user’s webcam, allowing to create and crop a (circular) profile picture_
 
-> Adaptation for the _Social Games Battery_
-> Demo: kalinke.io/photo-maker
+### Adaptation for the _Social Games Battery_
+
+#### 🚀 Demo: [kalinke.io/photo-maker](https://kalinke.web175.s99.goserver.host/photo-maker/)
 
 <img src="example.gif" width="50%">
 
