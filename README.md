@@ -8,17 +8,21 @@
 
 <img src="example.gif" width="50%">
 
-# Dependencies
+## Deployment
+
+Put all the files from `build` to your own webserver.
+
+## Dependencies
 
 - NodeJs
 
-# Edit changes & Deploy on your server
+## Edit changes & Deploy on your server
 
 1. Clone
 2. `npm ci`
 3. `npm run build`
 
-# Credits
+## Credits
 
 - https://github.com/mozmorris/react-webcam
 - http://foliotek.github.io/Croppie/
