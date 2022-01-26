@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e582c97e.chunk.css",
+    "main.js": "./static/js/main.4d611efc.chunk.js",
+    "main.js.map": "./static/js/main.4d611efc.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.7e71da5d.js",
+    "runtime-main.js.map": "./static/js/runtime-main.7e71da5d.js.map",
+    "static/js/2.96acb7fd.chunk.js": "./static/js/2.96acb7fd.chunk.js",
+    "static/js/2.96acb7fd.chunk.js.map": "./static/js/2.96acb7fd.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.e582c97e.chunk.css.map": "./static/css/main.e582c97e.chunk.css.map",
+    "static/js/2.96acb7fd.chunk.js.LICENSE.txt": "./static/js/2.96acb7fd.chunk.js.LICENSE.txt",
+    "static/media/App.css": "./static/media/pizzagame2-logo-1920x1080.01abd22d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7e71da5d.js",
+    "static/js/2.96acb7fd.chunk.js",
+    "static/css/main.e582c97e.chunk.css",
+    "static/js/main.4d611efc.chunk.js"
+  ]
+}
